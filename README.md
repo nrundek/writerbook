@@ -1,6 +1,6 @@
 # WriterBook
 
-WriterBook is a simple, accessible digital notebook for Windows. It provides a distraction-free writing page, keyboard-first navigation, screen-reader-friendly controls, live text counters, writing goals, persistent bookmarks, and export to Microsoft Word or PDF.
+WriterBook 1.0.6 is a simple, accessible digital notebook for Windows. It provides a distraction-free writing page, keyboard-first navigation, screen-reader-friendly controls, optional mechanical typing sounds, live text counters, writing goals, persistent bookmarks, and export to Microsoft Word or PDF.
 
 The application is available in Croatian, Serbian, and English. The installer is entirely in English.
 
@@ -12,6 +12,7 @@ The application is available in Croatian, Serbian, and English. The installer is
 - Live word, character, character-with-spaces, and line counters
 - Writing goals with a progress bar
 - Persistent bookmarks stored inside the `.writer` notebook
+- Optional old-typewriter and classic Perkins Brailler sounds while editing
 - Export to Microsoft Word (`.docx`) or PDF (`.pdf`)
 - Croatian, Serbian, and English interface languages
 - Windows High Contrast support
@@ -28,7 +29,10 @@ The application is available in Croatian, Serbian, and English. The installer is
 | `F4` | Announce characters including spaces |
 | `F5` | Announce the line count |
 | `F6` | Set a writing goal and show progress |
-| `F7` | Add a bookmark or resume from a saved bookmark |
+| `F7` | Mark the writing position or resume from it after reopening |
+| `F8` | Add a bookmark at the cursor position |
+| `F9` | Go to a bookmark |
+| `F10` | Delete a bookmark |
 | `Ctrl+N` | Create a new notebook |
 | `Ctrl+O` | Open a WriterBook notebook |
 | `Ctrl+S` | Save the notebook |
@@ -56,11 +60,16 @@ Enter a positive whole number. The current value, target, percentage, and progre
 
 ## Bookmarks
 
-Press `F7` at the position where you stop writing for the day. The bookmark is saved inside the `.writer` notebook.
+Press `F7` at the position where you stop writing for the day. WriterBook confirms the action visually and through the screen reader. The bookmark is saved inside the `.writer` notebook.
 
-After reopening a notebook, press `F7` to return to its saved bookmark. If the notebook contains several bookmarks, WriterBook presents an accessible list. Commands for adding, opening, and deleting bookmarks are also available from the **Edit** menu.
+After reopening a notebook, press `F7` to return to its saved bookmark. Use `F8` to add another bookmark at the cursor, `F9` to go to a bookmark, and `F10` to delete one. If the notebook contains several bookmarks, WriterBook presents an accessible list. The same commands are available from the **Edit** menu.
 
 Bookmarks automatically follow their positions when text is inserted or removed before them.
+
+## Typing sounds
+
+- **Enable typewriter sound**
+- **Enable braille writer sound**
 
 ## Languages
 
@@ -74,7 +83,7 @@ The selected language is applied to the entire application immediately and is re
 
 ## Installation
 
-Download `WriterBook-1.0-Setup.exe` from the latest GitHub release and run it. Administrator permission is required because WriterBook is installed for all Windows users.
+Download `WriterBook-1.0.6-Setup.exe` from the latest GitHub release and run it. Administrator permission is required because WriterBook is installed for all Windows users.
 
 The installer:
 
@@ -114,7 +123,8 @@ The build creates:
 
 ```text
 writer-dist\WriterBook.exe
-writer-dist\WriterBook-1.0-Setup.exe
+writer-dist\WriterBook-1.0.6-Setup.exe
+writer-dist\THIRD-PARTY-NOTICES.txt
 ```
 
 The build script also embeds the portable application in the installer.
@@ -129,14 +139,16 @@ WriterBook includes automated checks for:
 - text counters and writing-goal progress
 - GitHub release parsing
 - accessible menus and control names
+- focused screen-reader feedback for all bookmark function keys
+- embedded typing-sound resources and accessible checked states
 - installer output and accessibility
 
 Formal accessibility verification should also include manual testing with NVDA or JAWS on the target Windows versions.
 
 ## Data and privacy
 
-WriterBook stores application settings in the user's Windows application-data folder and stores notebook content in files chosen by the user. The application only accesses the internet when the user explicitly runs **Check for updates**.
+WriterBook stores application settings, including typing-sound choices, in the user's Windows application-data folder and stores notebook content in files chosen by the user. The application only accesses the internet when the user explicitly runs **Check for updates**.
 
 ## License
 
-No license has been specified yet. Add a `LICENSE` file before inviting third-party contributions or redistribution.
+No license has been specified yet for WriterBook itself. Third-party audio credits and licenses are listed in [`THIRD-PARTY-NOTICES.txt`](THIRD-PARTY-NOTICES.txt).
