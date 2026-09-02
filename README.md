@@ -1,6 +1,6 @@
 # WriterBook
 
-WriterBook 1.0.6 is a simple, accessible digital notebook for Windows. It provides a distraction-free writing page, keyboard-first navigation, screen-reader-friendly controls, optional mechanical typing sounds, live text counters, writing goals, persistent bookmarks, and export to Microsoft Word or PDF.
+WriterBook 1.0.8 is a simple, accessible digital notebook for Windows. It provides a distraction-free writing page, keyboard-first navigation, screen-reader-friendly controls, optional mechanical typing sounds, live text counters, writing goals, persistent bookmarks, and export to Microsoft Word or PDF.
 
 The application is available in Croatian, Serbian, and English. The installer is entirely in English.
 
@@ -83,7 +83,7 @@ The selected language is applied to the entire application immediately and is re
 
 ## Installation
 
-Download `WriterBook-1.0.6-Setup.exe` from the latest GitHub release and run it. Administrator permission is required because WriterBook is installed for all Windows users.
+Download `WriterBook-1.0.8-Setup.exe` from the latest GitHub release and run it. Administrator permission is required because WriterBook is installed for all Windows users.
 
 The installer:
 
@@ -97,7 +97,9 @@ For a portable installation, download and run `WriterBook.exe`.
 
 ## Updates
 
-Use **Help > Check for updates** to check the latest release from [`nrundek/writerbook`](https://github.com/nrundek/writerbook/releases/latest).
+Use **Help > Check for updates** to check the latest release from [`nrundek/writerbook`](https://github.com/nrundek/writerbook/releases/latest). When an update is available, WriterBook asks for confirmation, downloads the release asset whose name ends with `Setup.exe`, verifies its GitHub SHA-256 digest, closes after offering to save the current notebook, installs the update, and restarts. Windows displays the normal administrator-approval prompt. Existing settings are preserved.
+
+Versions earlier than 1.0.7 do not contain the automatic updater and must be upgraded to 1.0.7 manually once.
 
 If the installed version is current, WriterBook reports that no update is available. When a newer release exists, a download command appears in the Help menu. WriterBook prefers a release asset whose filename ends in `Setup.exe`; otherwise, it opens the release page.
 
@@ -123,7 +125,7 @@ The build creates:
 
 ```text
 writer-dist\WriterBook.exe
-writer-dist\WriterBook-1.0.6-Setup.exe
+writer-dist\WriterBook-1.0.8-Setup.exe
 writer-dist\THIRD-PARTY-NOTICES.txt
 ```
 

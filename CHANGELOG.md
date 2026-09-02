@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.0.8] - 2026-09-02
+
+### Changed
+
+- Replaced the writing area's startup accessibility message with **New digital notebook, writing document** and removed the additional Alt/F1 instructions.
+- Made **Enable typewriter sound** and **Enable braille writer sound** mutually exclusive. Enabling either option now disables the other, while both may remain disabled.
+- When upgrading settings that previously had both sounds enabled, the typewriter sound remains enabled and the braille-writer sound is disabled.
+- Updated application, installer, Help, documentation, and release artifacts to version 1.0.8.
+
+## [1.0.7] - 2026-09-02
+
+### Added
+
+- Added a complete in-app update flow that downloads the latest GitHub `Setup.exe` release asset, verifies its SHA-256 digest, installs it, and restarts WriterBook after user confirmation.
+- Added an installer auto-update mode that waits for the running WriterBook process to close before replacing application files.
+
+### Fixed
+
+- The update-available dialog now offers to download and install immediately instead of ending without an action after **OK**.
+- Upgrades now preserve the user's language and typing-sound settings instead of replacing the settings file with defaults.
+
+### Changed
+
+- Updated application, installer, Help, documentation, and release artifacts to version 1.0.7.
+
 ## [1.0.6] - 2026-09-02
 
 ### Changed
